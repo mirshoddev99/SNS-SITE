@@ -1,0 +1,55 @@
+                                            Logic of the followers feature
+
+Q: how can I know the total number of followers who are following me?
+
+A: To find the total number of followers who are following a specific Profile object,
+you can use the followers field that was added to the Profile model in the same way that you used the following field to find the users that a Profile object is following.
+
+For example, if you have a profile object representing the user you are interested in,
+you can get the set of users that are following that profile object by calling profile.followers.all(),
+and then find the total number of users in the set by calling .count() on the resulting queryset.
+
+# Get the profile object for the user you are interested in
+profile = Profile.objects.get(id=<profile_id>)
+
+# Get the set of users that are following the profile object
+followers = profile.followers.all()
+
+# Find the total number of users in the set of followers
+num_followers = followers.count()
+
+# Print the total number of followers
+print(f'Total number of followers: {num_followers}')
+
+
+
+
+
+
+
+
+
+                                                Logic of the following feature
+Question:
+">>> i_following_users = user_1.following.exclude(id=user_1.id)
+>>> i_following_users.count()
+5
+>>> i_following_users
+<QuerySet [<Profile: mushtariy>, <Profile: xudoyorxon>, <Profile: mirshod_python>, <Profile: Abdulmalik>, <Profile: Sevara>]>
+".
+In this case, the user with id 1 is following 5 users right. Or 5 users are following him?
+
+Answer:
+In this case, user_1 is following 5 other users. The code first retrieves the set of users that user_1 is following by calling user_1.following,
+and then excludes the user_1 object from that set using exclude(id=user_1.id).
+
+This means that the resulting i_following_users queryset contains all the users that user_1 is following, except for user_1 itself.
+
+Calling i_following_users.count() returns the number of users in the queryset, which in this case is 5, indicating that user_1 is following 5 other users.
+
+The queryset is then printed using print(i_following_users), which outputs a list of the Profile objects that user_1 is following, excluding user_1 itself.
+
+
+
+
+

@@ -1,0 +1,23 @@
+
+Q: I am getting confused with this concept.
+can I understand that ContentType model which is a table as regular as we create in the project?
+The ContentType table stores all apps and their models right?
+
+A: Yes, that's correct. The ContentType model in Django represents a table that stores information about the models defined in your Django project.
+Each row in the ContentType table represents a unique model, and contains information about the app that the model belongs to and the name of the model.
+
+The ContentType model is used in Django's content-type framework, which allows you to store generic foreign keys that can refer to any model in your project.
+The ContentType table provides a way to map the name of a model to its database representation, so that generic foreign keys can be used to refer to instances of any model in the project.
+
+
+
+ContentTypes - Databasedagi 1 ta table va u yerda projectdagi barcha apps va ular ichida yozilgan modellar haqida information saqlanadi.
+Deylik, Bizda account appda Profile degan va images appda Image degan modellar bor.
+
+Endi shular ContentType tableda quyidagicha ko'rinadi:
+
+                        ContentType table
+
+            |id(pk)|    |app_label|     |model|     |verb|
+            1           account         Profile     profile
+            2           images          Image        images

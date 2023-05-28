@@ -1,0 +1,9 @@
+Q: are both one-to-many and many-to-one the same right?
+
+A: No, one-to-many and many-to-one are different types of relationships in database design.
+
+A one-to-many relationship is when one entity is related to many other entities. For example, a customer can have many orders, but an order belongs to only one customer.
+
+A many-to-one relationship is when many entities are related to one entity. For example, many orders can belong to one customer, but a customer can only belong to one order.
+
+So, while the two relationships describe a similar type of connection, they are described from opposite perspectives.

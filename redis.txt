@@ -1,0 +1,37 @@
+Q:
+Where does Redis database store my files if I integrate it into my django project for using as a database?
+
+A:
+Redis is an in-memory data structure store, so the data is stored in memory rather than on disk.
+However, Redis can also be configured to periodically write the data to disk for persistence.
+When integrated into a Django project, Redis can be used as a cache or as a database backend for storing session data, but it is not typically used as the primary database for storing files.
+Instead, files are typically stored on disk or in a file storage service like Amazon S3 or Google Cloud Storage.
+
+
+Q:
+can I understand that Redis database uses RAM right?
+
+A:
+Yes, that's correct! Redis is an in-memory data store, which means that it stores data primarily in RAM (Random Access Memory), rather than on disk.
+This makes it very fast for accessing and manipulating data, but it also means that the data is volatile and can be lost if the system crashes or the power goes out.
+However, Redis also provides several mechanisms for persisting the data to disk, such as snapshotting and appending changes to a log, to provide durability and prevent data loss.
+
+
+
+Redis CLI (Command Line Interface) is a command-line tool that allows you to interact with Redis.
+You can use it to execute Redis commands and perform operations on your Redis database. Here are some examples of Redis CLI commands:
+
+SET key value: This command sets the value of a key in the Redis database.
+For example: SET mykey "Hello, world!".
+GET key: This command retrieves the value of a key from the Redis database.
+For example: GET mykey.
+INCR key: This command increments the value of a key by 1.
+For example: INCR mycounter.
+On the other hand, Redis client is a program or library that allows you to communicate with Redis from a programming language of your choice.
+Redis clients provide a more flexible way of interacting with Redis, as they allow you to integrate Redis functionality directly into your own programs.
+
+
+
+Some usefully commands for interacting with Redis client:
+1. Start Redis client - docker exec -it redis sh
+2. Start working with CLI of Redis - redis cli

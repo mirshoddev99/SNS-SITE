@@ -1,0 +1,15 @@
+Running Redis Docker container by following command:
+    - docker run -it --rm --name redis -p 6379:6379 redis
+
+
+
+Here is a breakdown of the command:
+
+docker run: This command is used to run a Docker container.
+-it: This option runs the container in interactive mode and connects to the container's TTY. This allows you to interact with the container's shell.
+--rm: This option removes the container automatically after it exits.
+--name redis: This option sets the name of the container to "redis".
+-p 6379:6379: This option maps the container's Redis port (6379) to the host machine's port (also 6379).
+This allows you to connect to the Redis server from outside the container.
+redis: This is the name of the Redis Docker image to use.
+So, running this command will start a Redis container, which you can then connect to using the Redis command-line interface or a Redis client.
