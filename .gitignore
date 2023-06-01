@@ -1,0 +1,9 @@
+media/
+docker.txt
+followers-following.txt
+redis.txt
+bookmarks/database-design.txt
+bookmarks/info.txt
+.idea
+.idea/workspace.xml
+.idea/misc.xml
