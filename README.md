@@ -1,4 +1,4 @@
-## Social Media Project
+# Social Media Project
 📝 Description
 This project is a social media platform developed using Python and Django framework. It provides users with various features to connect and interact with others in a seamless and engaging way. From account authentication to bookmarking and liking/disliking content, this social media project offers a comprehensive set of functionalities.
 
